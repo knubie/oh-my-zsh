@@ -20,5 +20,10 @@ alias l='ls -la'
 alias ll='ls -l'
 alias sl=ls # often screw this up
 
-alias afind='ack-grep -il'
+# Heroku
+alias hlogs='heroku logs --tail --source app | unbuffer -p cut -c 38- | grcat conf.rails'
+alias hconsole='heroku run console'
 
+# Finder
+alias show='defaults write com.apple.Finder AppleShowAllFiles YES; killall Finder'
+alias hide='defaults write com.apple.Finder AppleShowAllFiles NO; killall Finder'
